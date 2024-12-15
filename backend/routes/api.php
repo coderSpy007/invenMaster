@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StoreController;
 
 /*
 |----------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\AuthController;
 
 // Login Route
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/store', [StoreController::class, 'getStoreByUserId']);
 
 // Protected route for authenticated users
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
