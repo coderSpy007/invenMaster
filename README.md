@@ -1,2 +1,2 @@
-# invenMaster
-InvenMaster is an inventory management system for retailers that allows users to manage multiple stores under a single account, track profits, losses, and costs from various vendors, as well as detailed sales prices for each transaction, enabling accurate business decision-making.
+# InvenMaster
+InvenMaster is an advanced inventory management system designed for retail businesses, enabling users to manage multiple stores under a single account. The system efficiently handles product and vendor data, tracks profits and losses, and provides detailed insights into cost breakdowns for each purchase order from various vendors, including the sale prices for each transaction, ensuring comprehensive financial and inventory tracking for optimal business decision-making.
