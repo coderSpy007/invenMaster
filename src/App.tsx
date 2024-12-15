@@ -2,18 +2,18 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
 import Home from './pages/Home';
-import ConnectPhpServer from './components/ConnectPhpServer';
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/test" element={<ConnectPhpServer />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="min-h-screen bg-gradient-to-r from-blue via-fadeblue to-fadeblue">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 

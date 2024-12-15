@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// Define the type for the login response
 interface LoginResponse {
   token: string;
   user: {
@@ -10,7 +9,6 @@ interface LoginResponse {
   };
 }
 
-// Define the type for the error response
 interface ErrorResponse {
   message: string;
 }
