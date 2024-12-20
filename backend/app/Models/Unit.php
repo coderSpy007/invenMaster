@@ -43,6 +43,7 @@ class Unit extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'unit_code', 
         'unit_name', 
     ];
 

@@ -43,11 +43,14 @@ class Product extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'product_code', 
         'product_name', 
         'category_id', 
         'product_desc',
         'unit_id',  
-        'status_id',     
+        'spec_id',     
+        'store_id', 
+        'vendor_id',
     ];
 
     /**
@@ -59,14 +62,24 @@ class Product extends Model
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
-    public function status()
+    public function spec()
     {
-        return $this->belongsTo(Status::class, 'status_id', 'id');
+        return $this->belongsTo(Status::class, 'spec_id', 'id');
     }
 
     public function unit()
     {
         return $this->belongsTo(Unit::class, 'unit_id', 'id');
+    }
+
+    public function store()
+    {
+        return $this->belongsTo(Store::class, 'store_id', 'id');
+    }
+
+    public function vendor()
+    {
+        return $this->belongsTo(Vendor::class, 'vendor_id', 'id');
     }
 
 }

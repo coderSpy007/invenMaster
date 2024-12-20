@@ -50,13 +50,13 @@ function Login() {
 
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen px-[2rem]">
         <div className="bg-white h-auto md:h-[30rem] w-full max-w-[50rem] rounded-[1rem] flex flex-col md:flex-row">
-          {/* Left side */}
+          {/* Left */}
           <div className="h-[15rem] md:h-[30rem] w-full md:w-[25rem] bg-lightgrey rounded-t-[1rem] md:rounded-e-none md:rounded-s-[1rem]"></div>
 
-          {/* Right side */}
-          <div className="h-auto md:h-[30rem] w-full md:w-[25rem] rounded-b-[1rem] md:rounded-b-none md:rounded-e-[1rem] flex flex-col justify-center items-center p-4">
+          {/* Right */}
+          <div className="h-auto md:h-[30rem] w-full md:w-[25rem] rounded-b-[1rem] md:rounded-b-none md:rounded-e-[1rem] flex flex-col justify-center items-center p-4 mb-[2rem]">
             <h5 className="font-bold text-xl">Welcome Again!</h5>
             <input
               className="bg-lightgrey-2 mt-[2rem] w-full max-w-[16rem] h-[3rem] rounded-[10px] ps-[1rem] text-xs"
