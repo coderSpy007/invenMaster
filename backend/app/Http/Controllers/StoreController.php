@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {
-    /**
-     * Get the store name by user_id.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function getStoreByUserId(Request $request)
     {
         $validated = $request->validate([

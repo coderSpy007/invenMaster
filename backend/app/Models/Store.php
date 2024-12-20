@@ -43,6 +43,7 @@ class Store extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'store_code', 
         'store_name', 
         'user_id',     
     ];

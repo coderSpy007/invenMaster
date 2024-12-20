@@ -43,11 +43,16 @@ class Vendor extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'vendor_code', 
         'vendor_name', 
         'address', 
         'phone_number', 
         'email', 
+        'store_id',
     ];
 
-    
+    public function store()
+    {
+        return $this->belongsTo(Store::class, 'store_id', 'id');
+    }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StatusGroup extends Model
+class Spec extends Model
 {
     use HasFactory;
 
@@ -14,28 +14,28 @@ class StatusGroup extends Model
      *
      * @var string
      */
-    protected $table = 'status_group';
+    protected $table = 'spec';
 
     /**
      * The primary key associated with the table.
      *
      * @var string
      */
-    protected $primaryKey = 'status_group_code';  
+    protected $primaryKey = 'id';  
 
     /**
      * The type of the primary key ID.
      *
      * @var string
      */
-    protected $keyType = 'string'; 
+    protected $keyType = 'int'; 
 
     /**
      * Indicates if the IDs are auto-incrementing.
      *
      * @var bool
      */
-    public $incrementing = false;
+    public $incrementing = true;
 
     /**
      * The attributes that are mass assignable.
@@ -43,9 +43,17 @@ class StatusGroup extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'status_group_code', 
-        'status_group_desc', 
+        'category_id', 
+        'spec_value',     
     ];
 
-    
+    /**
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function specGroup()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+
 }
